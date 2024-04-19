@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerAwarenessController = GetComponent<PlayerAwarenessController>();
+        _targetDirection = transform.up;
 
     }
 
@@ -35,18 +36,14 @@ public class EnemyMovement : MonoBehaviour
         {
             _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }
-        else
-        {
-            _targetDirection = Vector2.zero;
-        }
+    }
+
+    private void HandleRandomDirectionChange()
+    {
+
     }
     private void RotateWowardsTarget()
     {
-        if(_targetDirection == Vector2.zero)
-        {
-            return;
-        }
-
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
 
@@ -54,13 +51,6 @@ public class EnemyMovement : MonoBehaviour
     }
     private void SetVelocity()
     {
-        if(_targetDirection == Vector2.zero)
-        {
-            _rigidbody.velocity = Vector2.zero;
-        }
-        else
-        {
             _rigidbody.velocity = transform.up * _speed;
-        }
     }
 }

@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        cam = Camera.main;
     }
     private void Update()
     {
@@ -29,8 +30,16 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SetPlayerVelocity();
+        RotateInDirectionOfInput();
+        RotateinDirectionofMouse();
     }
 
+    private void RotateinDirectionofMouse()
+    {
+        Vector2 lookDir = mousePos - _rigidbody.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        _rigidbody.rotation = angle;
+    }
     private void SetPlayerVelocity()
     {
         _smoothedMovementInput = Vector2.SmoothDamp(
@@ -38,12 +47,17 @@ public class PlayerMovement : MonoBehaviour
             _movementInput,
             ref _movementInputSmoothVelocity, 0.1f);
         _rigidbody.velocity = _smoothedMovementInput * _speed; //(x,y) * speed
-
-        Vector2 lookDir = mousePos - _rigidbody.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
-        _rigidbody.rotation = angle;
     }
+    private void RotateInDirectionOfInput()
+    {
+        if (_movementInput != Vector2.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMovementInput);
+            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
 
+            _rigidbody.MoveRotation(rotation);
+        }
+    }
     private void OnMove(InputValue inputValue) //method
     {
         _movementInput = inputValue.Get<Vector2>();
