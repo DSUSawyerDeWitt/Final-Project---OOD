@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementInput; //stores an x,y value
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
+    private Animator _animator;
 
     public Camera cam;
     Vector2 mousePos;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+        _animator = GetComponent<Animator>();
     }
     private void Update()
     {
