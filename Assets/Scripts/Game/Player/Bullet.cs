@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField]
+    private float _DamageAmount;
+
     private Camera _camera;
 
     private void Awake()
@@ -20,7 +23,13 @@ public class Bullet : MonoBehaviour
         if (collision.GetComponent<EnemyMovement>())
         {
             HealthController healthController = collision.GetComponent<HealthController>();
-            healthController.TakeDamamge(10);
+            healthController.TakeDamamge(_DamageAmount);
+            Destroy(gameObject);
+        }
+        if (collision.GetComponent<EnemySpawnerHealth>())
+        {
+            HealthController healthController = collision.GetComponent<HealthController>();
+            healthController.TakeDamamge(_DamageAmount);
             Destroy(gameObject);
         }
     }
