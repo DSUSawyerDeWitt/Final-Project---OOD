@@ -44,8 +44,14 @@ TagManager:
   - name: Background
     uniqueID: 2909327991
     locked: 0
+  - name: Walls
+    uniqueID: 2980906119
+    locked: 0
   - name: Middleground
     uniqueID: 1667738245
+    locked: 0
+  - name: EnemySpawner
+    uniqueID: 342318239
     locked: 0
   - name: Collectable
     uniqueID: 2027166023

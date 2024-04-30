@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -54,5 +55,14 @@ public class PlayerShoot : MonoBehaviour
         {
             _fireSingle = true;
         }
+    }
+    public void IncreaseShotTime(float newtime)
+    {
+        _timeBetweenShots = newtime;
+    }
+
+    public void ResetShotTime(float resettime)
+    {
+        _timeBetweenShots = resettime;
     }
 }
