@@ -13,9 +13,9 @@ public class EnemyMovement : Enemy
     [SerializeField]
     private float _screenBorder;
 
-    private Rigidbody2D _rigidbody;
-    private PlayerAwarenessController _playerAwarenessController;
-    private Vector2 _targetDirection;
+ //   private Rigidbody2D _rigidbody;
+ //   private PlayerAwarenessController _playerAwarenessController;
+ //   private Vector2 _targetDirection;
     private float _changeDirectionCooldown;
     private Camera _camera;
 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyScoreAllocator : Enemy
 {
-    [SerializeField]
-    private int _killScore;
+//    [SerializeField]
+//    private int _killScore;
 
-    private ScoreController _scoreController;
+//    private ScoreController _scoreController;
 
 
     private void Awake()
@@ -15,8 +15,8 @@ public class EnemyScoreAllocator : Enemy
        _scoreController = FindObjectOfType<ScoreController>();
     }
 
-    public void AllocateScore()
+    public override void AllocateScore()
     {
-        _scoreController.AddScore(_killScore);
+        base.AllocateScore();
     }
 }

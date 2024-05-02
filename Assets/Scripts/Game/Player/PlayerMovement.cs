@@ -3,25 +3,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : Player
 {
-   // [SerializeField]
-   // private float _speed;
 
     [SerializeField]
     private float _rotationSpeed;
 
-   // private Rigidbody2D _rigidbody;
-  //  private Vector2 _movementInput; //stores an x,y value
-   // private Vector2 _smoothedMovementInput;
-  //  private Vector2 _movementInputSmoothVelocity;
     private Animator _animator;
 
-    public Camera cam;
+  //  public Camera cam;
     Vector2 mousePos;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        cam = Camera.main;
         _animator = GetComponent<Animator>();
     }
     private void Update()

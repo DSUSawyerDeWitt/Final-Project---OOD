@@ -10,9 +10,16 @@ public class Player : MonoBehaviour
     protected Vector2 _movementInputSmoothVelocity;
     protected Rigidbody2D _rigidbody;
 
+    public Camera cam;
+
     public Player()
     {
         _speed = 2.5f;
+    }
+
+    private void Awake()
+    {
+        cam = Camera.main;
     }
 
     protected virtual void SetPlayerVelocity()

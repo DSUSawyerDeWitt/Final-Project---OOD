@@ -13,7 +13,7 @@ public class EnemySpawner : SpawnEnemy
     [SerializeField]
     private float _maximumSpawnTime;
 
-    private float _timeUntilSpawn;
+    //private float _timeUntilSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +35,9 @@ public class EnemySpawner : SpawnEnemy
     private void SetTimeUntilSpawn()
     {
         _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
+    }
+    protected override void SpawnFaster()
+    {
+        base.SpawnFaster();
     }
 }

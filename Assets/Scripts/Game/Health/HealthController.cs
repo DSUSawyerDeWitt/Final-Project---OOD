@@ -6,12 +6,12 @@ using UnityEngine.Events;
 
 public class HealthController : Health
 {
-    [SerializeField]
-    private float _currentHealth;
+//    [SerializeField]
+  //  private float _currentHealth;
 
-    [SerializeField]
-    private float _maximumHealth;
-
+  //  [SerializeField]
+  //  private float _maximumHealth;
+  
     public float RemainingHealthPercentge
     {
         get
@@ -28,7 +28,7 @@ public class HealthController : Health
 
     public UnityEvent OnHealthChanged;
 
-    public void TakeDamamge(float damageAmount)
+    public override void TakeDamamge(float damageAmount)
     {
         if(_currentHealth == 0)
         {

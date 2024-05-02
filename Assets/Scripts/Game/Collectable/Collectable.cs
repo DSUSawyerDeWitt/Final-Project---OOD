@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    
+    [SerializeField]
+    protected float _healthAmount;
 }

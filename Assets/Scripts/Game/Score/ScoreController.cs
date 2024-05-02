@@ -28,4 +28,9 @@ public class ScoreController : Score
         Score += amount;
         OnScoreChanged.Invoke();
     }
+
+    protected override void ResetScore()
+    {
+        base.ResetScore();
+    }
 }
