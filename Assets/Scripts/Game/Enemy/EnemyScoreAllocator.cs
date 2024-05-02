@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScoreAllocator : MonoBehaviour
+public class EnemyScoreAllocator : Enemy
 {
     [SerializeField]
     private int _killScore;

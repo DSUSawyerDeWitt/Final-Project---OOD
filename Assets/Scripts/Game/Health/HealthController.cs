@@ -4,7 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HealthController : MonoBehaviour
+public class HealthController : Health
 {
     [SerializeField]
     private float _currentHealth;

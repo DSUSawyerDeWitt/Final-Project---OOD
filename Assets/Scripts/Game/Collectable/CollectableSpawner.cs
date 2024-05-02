@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectableSpawner : MonoBehaviour
+public class CollectableSpawner : Collectable
 {
     [SerializeField]
     private List<GameObject> _collectablePrefab;

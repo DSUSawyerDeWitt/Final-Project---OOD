@@ -3,11 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ScoreController : MonoBehaviour
+public class ScoreController : Score
 {
-    public UnityEvent OnScoreChanged; 
-    public int Score {  get; private set; }
-
+    public UnityEvent OnScoreChanged;
+    //   public int Score {  get; private set; }
+    private int score;
+    public int Score
+    {
+        get { return score; }
+        set
+        {
+            if(value < 0)
+            {
+                score = 0;
+            }
+            else
+            {
+                score = value;
+            }
+        }
+    }
     public void AddScore(int amount)
     {
         Score += amount;

@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerShoot : MonoBehaviour
+public class PlayerShoot : Player
 {
     [SerializeField]
     private GameObject _bulletPrefab;
@@ -59,10 +59,5 @@ public class PlayerShoot : MonoBehaviour
     public void IncreaseShotTime(float newtime)
     {
         _timeBetweenShots = newtime;
-    }
-
-    public void ResetShotTime(float resettime)
-    {
-        _timeBetweenShots = resettime;
     }
 }

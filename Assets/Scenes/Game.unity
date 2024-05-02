@@ -621,6 +621,7 @@ GameObject:
   - component: {fileID: 128497217}
   - component: {fileID: 128497218}
   - component: {fileID: 128497219}
+  - component: {fileID: 128497220}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -684,7 +685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0076a56edd0e042812853c0e4f5492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
   _rotationSpeed: 720
   cam: {fileID: 519420031}
 --- !u!114 &128497211
@@ -960,6 +960,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c5d023353f9bcd42977e9b6d681ab5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &128497220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128497206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba34f5461f0c6445b2f38174a9c1888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &152576170 stripped

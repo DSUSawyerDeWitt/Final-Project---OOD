@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteFlash : MonoBehaviour
+public class SpriteFlash : Player
 {
     private SpriteRenderer _spriteRenderer;
 

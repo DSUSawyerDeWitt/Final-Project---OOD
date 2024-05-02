@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2027166023
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8405530004048444593}
-  - component: {fileID: 5564207949602749640}
+  - component: {fileID: 8976344721658437733}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 5750766465953643536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5564207949602749640
+--- !u!114 &8976344721658437733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,6 +126,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4726232013050337523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea7701d2bcfdc544a6655f8bdfdf525, type: 3}
+  m_Script: {fileID: 11500000, guid: 474a187ddca7ebd4b8f8fb1ccf87bea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

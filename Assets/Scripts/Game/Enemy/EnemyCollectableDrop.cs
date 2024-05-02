@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollectableDrop : MonoBehaviour
+public class EnemyCollectableDrop : Enemy
 {
     [SerializeField]
     private float _chanceOfCollectableDrop;

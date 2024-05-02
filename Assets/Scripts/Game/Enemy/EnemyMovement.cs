@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : Enemy
 {
     [SerializeField]
     private float _speed;
@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         UpdateTargetDirection();
-        RotateWowardsTarget();
+        RotateTowardsTarget();
         SetVelocity();
     }
 
@@ -82,7 +82,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void RotateWowardsTarget()
+    private void RotateTowardsTarget()
     {
         Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _targetDirection);
         Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);

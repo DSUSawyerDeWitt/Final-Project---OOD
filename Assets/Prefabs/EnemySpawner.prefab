@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6868135306019468119}
   - component: {fileID: 2296986850667787885}
   - component: {fileID: 5355021566855185794}
-  - component: {fileID: 4605840819567361111}
   - component: {fileID: 6525654335841017677}
   - component: {fileID: 2312890798306260349}
+  - component: {fileID: 6321240600773301300}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -86,19 +86,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.35
---- !u!114 &4605840819567361111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878210519256317936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39939f9e4d84fb647b22633ce14bef46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.5
 --- !u!114 &6525654335841017677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +132,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5c4cf6bce71ffa479dcb04c3c4fed1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6321240600773301300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878210519256317936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39939f9e4d84fb647b22633ce14bef46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7006231359196363217

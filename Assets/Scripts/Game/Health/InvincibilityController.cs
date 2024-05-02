@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InvincibilityController : MonoBehaviour
+public class InvincibilityController : Health
 {
     private HealthController _healthController; // field
     private SpriteFlash _spriteFlash;
